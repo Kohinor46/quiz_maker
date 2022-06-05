@@ -1,0 +1,99 @@
+Path_to_files: "./"
+Telegram_token: ${Your_token_here}
+Welcome: ${Welcome_text}
+Welcome_with_video: true
+Welcome_video_from_url: true
+Media: "https://ne-kurim.ru/forum/attachments/start-gif.1102982/"
+Admin_ids:
+  - ${Id from telegram}
+Rounds:
+  0:
+      Queston: "1.Photo from disk?"
+      With_photo: true
+      Photo_from_disk: true
+      Media: "./R1.jpg"
+      Points: 100
+      Answers:
+        0: "1"
+        1: "2"
+        2: "3"
+        3: "4"
+      Right_answer: 2
+      Fifty_fifty_buttons:
+        - 2
+        - 3
+  1:
+      Queston: "2.Video from disk?"
+      With_video: true
+      Video_from_disk: true
+      Media: "./R2.mp4"
+      Points: 200
+      Answers:
+        0: "1"
+        1: "2"
+        2: "3"
+        3: "4"
+      Right_answer: 2
+      Fifty_fifty_buttons:
+        - 2
+        - 3
+  2:
+      Queston: "3.Audio from disk?"
+      With_audio: true
+      Audio_from_disk: true
+      Media: "./R3.wav"
+      Points: 200
+      Answers:
+        0: "1"
+        1: "2"
+        2: "3"
+        3: "4"
+      Right_answer: 2
+      Fifty_fifty_buttons:
+        - 2
+        - 3
+  3:
+      Queston: "1.Photo from url?"
+      With_photo: true
+      Photo_from_url: true
+      Media: "https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.differencebetween.net%2Flanguage%2Fwords-language%2Fdifference-between-example-and-sample%2F&psig=AOvVaw0B33l2oDKAI1Ly0PIWIQjd&ust=1654520724309000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCICj95KwlvgCFQAAAAAdAAAAABAD"
+      Points: 100
+      Answers:
+        0: "1"
+        1: "2"
+        2: "3"
+        3: "4"
+      Right_answer: 2
+      Fifty_fifty_buttons:
+        - 2
+        - 3
+  4:
+      Queston: "2.Video from url?"
+      With_video: true
+      Video_from_url: true
+      Media: "https://file-examples.com/storage/fe83f6744b629b798a083a5/2017/04/file_example_MP4_480_1_5MG.mp4"
+      Points: 200
+      Answers:
+        0: "1"
+        1: "2"
+        2: "3"
+        3: "4"
+      Right_answer: 2
+      Fifty_fifty_buttons:
+        - 2
+        - 3
+  5:
+      Queston: "3.Audio from url?"
+      With_audio: true
+      Audio_from_url: true
+      Media: "https://file-examples.com/storage/fe83f6744b629b798a083a5/2017/11/file_example_WAV_1MG.wav"
+      Points: 200
+      Answers:
+        0: "1"
+        1: "2"
+        2: "3"
+        3: "4"
+      Right_answer: 2
+      Fifty_fifty_buttons:
+        - 2
+        - 3
