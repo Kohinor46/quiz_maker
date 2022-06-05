@@ -82,7 +82,7 @@ var (
 
 //парсим путь до конфиг файла из флага
 func init() {
-	flag.StringVar(&config_path, "path to config file", "./config.yaml", "path to config file")
+	flag.StringVar(&config_path, "config", "./config.yaml", "path to config file")
 }
 
 func main() {
