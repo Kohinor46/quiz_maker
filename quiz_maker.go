@@ -401,7 +401,7 @@ func hadle_buttons_with_help(bu []tb.InlineButton) {
 		//разбивает кнопку на состовные части Help_раунд_ответ_ид пользователя
 		an := strings.Split(bu[0].Unique, "_")
 		round, _ := strconv.Atoi(an[1])
-		u := get_user(an[3])
+		u := get_user(an[3]+".yaml")
 		if u.Is_round_answers[round-1] {
 			b.Respond(ca, &tb.CallbackResponse{Text: "Ты уже ответил"})
 			return
@@ -520,15 +520,15 @@ func hadle_answer_buttons(bu []tb.InlineButton) {
 		an := strings.Split(bu[0].Unique, "_")
 		answer, _ := strconv.Atoi(an[1])
 		round, _ := strconv.Atoi(an[0])
-		u := get_user(an[2])
+		u := get_user(an[2]+".yaml")
 		if u.Is_round_answers[round-1] {
 			b.Respond(ca, &tb.CallbackResponse{Text: "Ты уже отвечал"})
 			return
 		}
 		if config.Rounds[round-1].Right_answer == answer-1 {
-			add_points(an[2], config.Rounds[round-1].Points)
+			add_points(an[2]+".yaml", config.Rounds[round-1].Points)
 		}
-		write_answer(round-1, an[2])
+		write_answer(round-1, an[2]+".yaml")
 		if round != 15 {
 			write_statistic(round-1, answer-1)
 		}
@@ -630,7 +630,7 @@ func add_points(id string, p int) {
 
 //Возвращает одного пользователя
 func get_user(file_name string) User {
-	yamlFile, err := ioutil.ReadFile(config.Path_to_files + currentTime + "/" + file_name + ".yaml")
+	yamlFile, err := ioutil.ReadFile(config.Path_to_files + currentTime + "/" + file_name)
 	if err != nil {
 		log.Printf("yamlFile.Get err   #%v ", err)
 		send_to_admin("Ошибка чтения файла пользователя" + file_name + ":\n" + err.Error())
